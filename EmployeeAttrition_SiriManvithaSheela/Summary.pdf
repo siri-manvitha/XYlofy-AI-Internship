@@ -1,1 +1,30 @@
+# Employee Attrition Prediction Using Machine Learning
+
+## Project Summary
+
+Employee attrition is one of the major challenges faced by organizations, as the loss of skilled employees leads to increased recruitment costs, training expenses, reduced productivity, and loss of organizational knowledge. Predicting employee attrition before it occurs enables Human Resource (HR) teams to take proactive measures to improve employee retention. The objective of this project was to develop a machine learning model capable of predicting whether an employee is likely to leave the organization based on various personal, professional, and workplace-related factors.
+
+The project was implemented using the IBM HR Analytics Employee Attrition dataset, which contains information for 1,470 employees with 35 features describing employee demographics, job characteristics, compensation, work-life balance, job satisfaction, performance ratings, and other employment-related attributes. The target variable, **Attrition**, indicates whether an employee left the company ("Yes") or remained ("No").
+
+The project began with data loading and exploration using the Pandas library. Initial analysis included examining the dataset structure, identifying numerical and categorical variables, checking dataset dimensions, calculating the employee attrition rate, and verifying class distribution. The analysis revealed that the dataset is moderately imbalanced, with significantly more employees staying than leaving, making appropriate evaluation metrics essential during model development.
+
+During the data preprocessing stage, the dataset was cleaned by checking for missing values and removing irrelevant features such as EmployeeNumber, Over18, StandardHours, and other constant or non-informative columns that do not contribute to prediction. The target variable was converted from categorical values ("Yes"/"No") into binary values (1/0). Categorical features such as Department, Job Role, Business Travel, Education Field, Marital Status, and Gender were transformed into numerical representations using One-Hot Encoding. Numerical features were standardized using StandardScaler to improve model performance and ensure consistent feature scaling.
+
+Exploratory Data Analysis (EDA) was performed to understand the factors influencing employee attrition. Various visualizations and statistical summaries were created to examine attrition across departments, job roles, monthly income, work-life balance ratings, and years at the company. The analysis indicated that attrition is higher among employees in certain departments and job roles, particularly those with lower monthly income, shorter organizational tenure, lower job satisfaction, and poorer work-life balance. These insights provide valuable information for HR departments to identify employee groups that may require targeted retention initiatives.
+
+To build predictive models, the dataset was divided into training and testing sets using an 80:20 split. Since the target classes were imbalanced, the `class_weight='balanced'` parameter was used to reduce bias toward the majority class. Three supervised machine learning classification algorithms were implemented and compared:
+
+* Logistic Regression
+* Random Forest Classifier
+* Gradient Boosting Classifier
+
+Each model was evaluated using multiple performance metrics, including Accuracy, Precision, Recall, F1-Score, ROC-AUC Score, and Confusion Matrix analysis. Performance comparison allowed identification of the model that best balanced predictive accuracy with the ability to correctly identify employees at risk of leaving. Feature importance analysis was then conducted using the best-performing model to determine the variables contributing most strongly to attrition prediction.
+
+Several visualizations were developed to communicate both business insights and model performance. These included bar charts illustrating attrition rates across departments and job roles, box plots comparing monthly income between employees who left and those who stayed, confusion matrix heatmaps for model evaluation, feature importance charts highlighting the most influential predictors, and ROC curve comparisons across all three models.
+
+The findings demonstrate that employee attrition is influenced by multiple interacting factors rather than salary alone. Variables such as overtime, job satisfaction, work-life balance, years at the company, monthly income, and job role emerged as important predictors of employee turnover. Based on these insights, organizations can prioritize retention efforts by identifying high-risk employees early, improving work-life balance initiatives, monitoring overtime, enhancing employee engagement, and conducting targeted retention discussions for vulnerable employee groups.
+
+Although the developed machine learning model provides valuable predictive insights, it also has certain limitations. The model identifies statistical relationships within historical data but cannot establish direct causal relationships. Furthermore, organizational culture, external job opportunities, economic conditions, and personal circumstances are not represented within the dataset, meaning HR professionals should use model predictions alongside managerial judgment rather than relying solely on automated decisions.
+
+Overall, this project demonstrates the practical application of data preprocessing, exploratory data analysis, supervised machine learning, model evaluation, and business interpretation to solve a real-world HR analytics problem. The resulting predictive system enables organizations to proactively identify employees at risk of attrition and supports data-driven decision-making aimed at improving employee retention and reducing organizational costs.
 
