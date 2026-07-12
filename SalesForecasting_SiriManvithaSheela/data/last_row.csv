@@ -1,0 +1,2 @@
+Date,Sales,Lag_1,Lag_2,Lag_3,Rolling_Mean_3,Month,Quarter,Season
+2018-12-31 00:00:00,60156.07,31703.658,51862.71,86152.888,47907.48,3,4,1
