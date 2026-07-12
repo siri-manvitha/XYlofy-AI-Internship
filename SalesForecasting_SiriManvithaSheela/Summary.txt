@@ -1,1 +1,47 @@
+Executive Business Report – Sales Forecasting & Demand Analysis
+Executive Summary:
+This project analyses historical retail sales data to help improve inventory planning and business decision-making. The system identifies sales patterns, predicts future demand, detects unusual sales transactions, and groups products based on their demand characteristics. The analysis shows that sales vary across product categories, regions, and seasons, making accurate forecasting important for efficient inventory management. By using machine learning techniques, the company can reduce stock shortages, avoid excess inventory, and make better purchasing decisions. Overall, the system provides valuable insights that support data-driven supply chain planning and financial management.
+Key Findings from Data Analysis and Forecasting:
+•	Sales showed clear monthly and yearly variations, indicating seasonal demand patterns.
+•	Technology and Furniture categories generated the highest sales revenue, while Office Supplies had more consistent demand.
+•	The West & East regions contributed the highest overall sales compared to other regions.
+•	Historical sales trends helped the forecasting model estimate future demand using XGBoost.
+•	The forecasting results provide an estimate of expected sales for the next three months, helping the business plan inventory in advance.
+Three-Month Sales Forecast:
+Based on historical sales trends, the model predicts that overall sales are expected to remain relatively stable over the next three months.
+Month	Forecasted Sales
+January 2019	60,156
+February 2019	60,156
+March 2019	60,156
+Top Three Anomalies and Likely Causes:
+The anomaly detection model identified several unusually high sales transactions. These unusual transactions differ significantly from normal daily sales and should be reviewed during future forecasting because they can influence demand predictions.
+Order Date	  Sales	Likely Cause
+22-03-2015	37,703.67	Large bulk purchase or corporate order
+18-11-2018	30,572.45	Seasonal promotion or high-value customer purchase
+02-12-2018	35,998.90	Holiday season demand or bulk inventory purchase
+
+Product Demand Segmentation:
+The K-Means clustering model grouped products into different demand segments based on total sales, growth rate, volatility, and average order value.
+Demand Cluster	Example Categories	Recommended Inventory Strategy
+High 
+Demand Cluster	Phones, Chairs Storage, Tables,Accessories	• Maintain higher inventory levels
+.•Prioritize replenishment
+.• Monitor stock frequently to avoid stockouts.
+Medium Demand Cluster	Appliances, Bookcases, Furnishings,Paper, Supplies	• Maintain balanced inventory
+• Review stock weekly.
+• Reorder based on demand trends.
+Premium/ High-Value Cluster	Copiers, Machines	• Keep limited inventory.
+•Purchase mainly against confirmed demand
+• Closely monitor high-value orders.
+Business Recommendations:
+1.	Business Recommendations: Products such as Phones, Chairs, Storage, and Tables consistently generate high sales. Maintaining additional stock for these products can reduce lost sales caused by stock shortages.
+2.	Monitor High-Value Transactions: Several unusually large sales transactions were detected during anomaly analysis. These should be reviewed regularly to distinguish genuine bulk orders from possible data quality issues or unexpected business events.
+3.	Use Forecasts for Monthly Inventory Planning: The forecasting model provides estimated sales for the upcoming months. Using these forecasts during purchasing and inventory planning can reduce excess stock while ensuring sufficient product availability,
+
+Risk and Limitation
+The forecasting model is based only on historical sales data. It does not consider external factors such as holidays, promotional campaigns, competitor activities, inflation, or changes in customer preferences. Because of this, unexpected market events may cause actual sales to differ from the predicted values. The forecasting system should therefore be used as a decision-support tool alongside business judgment rather than as the only basis for planning.
+Overall Conclusion:
+The Sales Forecasting System successfully combines sales analysis, demand forecasting, anomaly detection, and customer demand segmentation into a single decision-support solution. The insights generated can help improve inventory planning, reduce operational costs, and support better financial and supply chain decisions. By using these data-driven recommendations, the business can improve stock availability, optimize purchasing, and respond more effectively to changing customer demand.
+
+
 
